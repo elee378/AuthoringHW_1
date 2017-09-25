@@ -51,4 +51,8 @@
 				image.addEventListener('click', changeElements, false);
 			});
 
+			//trigger spring on page load
+			//document.querySelector('#spring').click();
+			changeElements.call(document.querySelector('#spring'));
+
 })();
