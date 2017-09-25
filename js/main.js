@@ -27,6 +27,12 @@
 					newSubImg.classList.add('thumb');
 					//set the src
 					newSubImg.src = "images/" + objectIndex.images[index];
+
+					newSubImg.dataset.index = index;
+
+					//add an event handler to trigger a lightbox
+					newSubImg.addEventListener('click', popLightbox, false);
+
 					//add it to the page
 					subImages.appendChild(newSubImg);
 				});
@@ -50,6 +56,14 @@
 				//add an event handler for each image
 				image.addEventListener('click', changeElements, false);
 			});
+
+			//trigger the lightbox
+			function popLightbox(){
+				debugger;
+				let lightbox = document.querySelector('.lightbox');
+
+				lightbox.style.display = "block";
+			}
 
 			//trigger spring on page load
 			//document.querySelector('#spring').click();
