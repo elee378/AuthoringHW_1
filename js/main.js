@@ -31,7 +31,7 @@
 					newSubImg.dataset.index = index;
 
 					//add an event handler to trigger a lightbox
-					newSubImg.addEventListener('click', popLightbox, false);
+					newSubImg.addEventListener('click', function() { popLightbox(index, objectIndex); }, false);
 
 					//add it to the page
 					subImages.appendChild(newSubImg);
@@ -58,11 +58,34 @@
 			});
 
 			//trigger the lightbox
-			function popLightbox(){
-				debugger;
+			function popLightbox(currentIndex, currentObject){
+				//debugger;
+				//move the window to the top every time we click - quick bug fix
+				window.scrollTo(0, 0);
+				document.body.style.overflow = "hidden";
 				let lightbox = document.querySelector('.lightbox');
+				let lightboxImg = lightbox.querySelector('img');
+				let lightboxDesc = lightbox.querySelector('p');
+				let lightBoxClose = document.querySelector('.close-lightbox');
 
 				lightbox.style.display = "block";
+				lightboxImg.src = "images/" + currentObject.images[currentIndex];
+				lightboxDesc.innerHTML = currentObject.imageDescription[currentIndex];
+
+				lightBoxClose.addEventListener('click', closeLightbox, false);
+			}
+
+			function closeLightbox(){
+				//reset everything, close the lightbox
+				//debugger;
+				document.body.style.overflow = null;
+				let lightbox = document.querySelector('.lightbox');
+				let lightboxImg = lightbox.querySelector('img');
+				let lightboxDesc = lightbox.querySelector('p');
+
+				lightbox.style.display = "none";
+				lightboxImg.src = "#";
+				lightboxDesc.innerHTML = "";
 			}
 
 			//trigger spring on page load

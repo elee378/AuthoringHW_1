@@ -6,7 +6,16 @@ var dynamicContent = {
 
 			images : [
 				"spring_1.jpg",
-				"spring_2.jpg"
+				"spring_2.jpg",
+				"spring_3.jpg",
+				"spring_4.jpg"
+			],
+
+			imageDescription : [
+				"this is description 1",
+				"this is description 2",
+				"this is description 3",
+				"this is description 4"
 			]
 		},
 
@@ -17,7 +26,16 @@ var dynamicContent = {
 
 			images : [
 				"summer_1.jpg",
-				"summer_2.jpg"
+				"summer_2.jpg",
+				"summer_3.jpg",
+				"summer_4.jpg"
+			],
+
+			imageDescription : [
+				"this is description 5",
+				"this is description 6",
+				"this is description 7",
+				"this is description 8"
 			]
 		},
 
@@ -28,7 +46,16 @@ var dynamicContent = {
 
 			images : [
 				"autumn_1.jpg",
-				"autumn_2.jpg"
+				"autumn_2.jpg",
+				"autumn_3.jpg",
+				"autumn_4.jpg"
+			],
+
+			imageDescription : [
+				"this is description 9",
+				"this is description 10",
+				"this is description 11",
+				"this is description 12"
 			]
 		},
 
@@ -39,7 +66,16 @@ var dynamicContent = {
 
 			images : [
 				"winter_1.jpg",
-				"winter_2.jpg"
+				"winter_2.jpg",
+				"winter_3.jpg",
+				"winter_4.jpg"
+			],
+
+			imageDescription : [
+				"this is description 13",
+				"this is description 14",
+				"this is description 15",
+				"this is description 16"
 			]
 		}
 	};
